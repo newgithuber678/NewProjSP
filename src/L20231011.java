@@ -10,13 +10,14 @@ public class L20231011 {
         // задача 2
         int clientDeviceYear=2015;
         System.out.println("Задача 2");
-        System.out.print("Установите ");
-        if(clientDeviceYear<2015)
-            System.out.print("облегченную ");
-        if(clientOS)
-            System.out.println("версию приложения для Android по ссылке");
-        else
-            System.out.println("версию приложения для iOS по ссылке");
+        if(clientDeviceYear<2015 && clientOS)
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        if(clientDeviceYear<2015 && !clientOS)
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        if(clientDeviceYear>=2015 && clientOS)
+            System.out.println("Установите версию приложения для Android по ссылке");
+        if(clientDeviceYear>=2015 && !clientOS)
+            System.out.println("Установите версию приложения для iOS по ссылке");
         // задача 3
         int year=2021;
         System.out.println("Задача 3");
@@ -25,18 +26,16 @@ public class L20231011 {
         else
             System.out.println(year+" год не является високосным");
         // задача 4
-        int deliveryDistance=95;
+        int deliveryDistance=18;
         System.out.println("Задача 4");
-        if(deliveryDistance<=100)
-            System.out.print("Потребуется дней: ");
-        else
+        if(deliveryDistance>=0 && deliveryDistance<=20)
+            System.out.println("Потребуется дней: 1");
+        if(deliveryDistance>20 && deliveryDistance<=60)
+            System.out.println("Потребуется дней: 2");
+        if(deliveryDistance>60 && deliveryDistance<=100)
+            System.out.println("Потребуется дней: 3");
+        if(deliveryDistance>100)
             System.out.println("Доставка не выполняется");
-        if(deliveryDistance<=20)
-            System.out.println("1");
-        else if(deliveryDistance<=60)
-            System.out.println("2");
-        else if(deliveryDistance<=100)
-            System.out.println("3");
         // задача 5
         byte monthNumber=12;
         System.out.println("Задача 5");
