@@ -12,11 +12,11 @@ public class L20231011 {
         System.out.println("Задача 2");
         if(clientDeviceYear<2015 && clientOS)
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        if(clientDeviceYear<2015 && !clientOS)
+        else if(clientDeviceYear<2015 && !clientOS)
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        if(clientDeviceYear>=2015 && clientOS)
+        else if(clientDeviceYear>=2015 && clientOS)
             System.out.println("Установите версию приложения для Android по ссылке");
-        if(clientDeviceYear>=2015 && !clientOS)
+        else if(clientDeviceYear>=2015 && !clientOS)
             System.out.println("Установите версию приложения для iOS по ссылке");
         // задача 3
         int year=2021;
