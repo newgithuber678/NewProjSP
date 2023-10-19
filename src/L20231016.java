@@ -47,7 +47,7 @@ public class L20231016 {
         System.out.println("Задача 9");
         for(int i=1;i<=12;i++) {
             nakopleniya+=vklad;
-            nakopleniya*=1.12;
+            nakopleniya*=1.01;
             System.out.println("Месяц "+i+", сумма накоплений равна "+nakopleniya+" рублей");
         }
         // задача 10
