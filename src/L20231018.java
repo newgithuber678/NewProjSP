@@ -24,46 +24,43 @@ public class L20231018 {
         }
         System.out.println();
         // задача 3
-        double people=12000000;
-        int spRozhd=17000, spSmer=8000;
+        int people=12000000;
+        int kolvoRozhd=0, kolvoSmer=0;
         System.out.println("Задача 3");
         i=0;
         while (i<10){
-            people+=spRozhd;
-            people-=spSmer;
+            kolvoRozhd=people/1000*17;
+            kolvoSmer=people/1000*8;
+            people=people+kolvoRozhd-kolvoSmer;
             i++;
             System.out.println("Год "+i+", численность населения составляет "+people);
         }
         // задача 4
-        nakopleniya=15000;
+        int sum=15000;
         months=0;
         System.out.println("Задача 4");
-        while (nakopleniya<12000000){
-            nakopleniya*=1.07;
+        while (sum<12000000){
+            sum=sum+(sum/100*7);
             months++;
-            System.out.println("Месяц "+months+", сумма накоплений равна "+nakopleniya+" рублей");
+            System.out.println("Месяц "+months+", сумма накоплений равна "+sum+" рублей");
         }
         // задача 5
-        nakopleniya=15000;
+        sum=15000;
         months=0;
         System.out.println("Задача 5");
-        while (nakopleniya<12000000){
-            nakopleniya*=1.1449; // за 2 месяца
-            nakopleniya*=1.1449;
-            nakopleniya*=1.1449;
-            months+=6;
-            System.out.println("Месяц "+months+", сумма накоплений равна "+nakopleniya+" рублей");
+        while (sum<12000000){
+            sum=sum+(sum/100*7);
+            months++;
+            if(months%6==0)
+                System.out.println("Месяц "+months+", сумма накоплений равна "+sum+" рублей");
         }
         // задача 6
-        nakopleniya=15000;
-        i=0;
+        sum=15000;
         System.out.println("Задача 6");
-        while (i<18){
-            nakopleniya*=1.1449; // за 2 месяца
-            nakopleniya*=1.1449;
-            nakopleniya*=1.1449;
-            i++;
-            System.out.println("Полугодие "+i+", сумма накоплений равна "+nakopleniya+" рублей");
+        for (months=1;months<12*9;months++){
+            sum=sum+(sum/100*7);
+            if(months%6==0)
+                System.out.println("Месяц "+months+", сумма накоплений равна "+sum+" рублей");
         }
         // задача 7
         int date=6;
