@@ -9,9 +9,9 @@ public class L20231101 {
         System.out.println();
         // задача 2
         boolean clientOS=false;
-        int currentYear= LocalDate.now().getYear();
+        year= LocalDate.now().getYear();
         System.out.println("Задача 2");
-        suggestAppVersion(currentYear, clientOS);
+        suggestAppVersion(year, clientOS);
         System.out.println();
         // задача 3
         int deliveryDistance=18;
