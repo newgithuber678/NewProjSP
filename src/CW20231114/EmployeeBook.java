@@ -223,8 +223,8 @@ public class EmployeeBook {
             System.out.println("Отдел " + otdel);
             for (int i = 0; i < spisok.length; i++) {
                 if (spisok[i] == null) continue;
-                if(spisok[i].getOtdel()==otdel)
-                    System.out.println(spisok[i].getSurname()+" "+spisok[i].getName()+" "+spisok[i].getOtchestvo());
+                if (spisok[i].getOtdel() == otdel)
+                    System.out.println(spisok[i].getSurname() + " " + spisok[i].getName() + " " + spisok[i].getOtchestvo());
 
             }
         }

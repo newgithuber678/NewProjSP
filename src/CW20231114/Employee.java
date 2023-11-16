@@ -6,7 +6,7 @@ public class Employee {
     private String otchestvo;
     private int otdel;
     private int earnMoney;
-    public static int counterId=1;
+    public static int counterId = 1;
     private int id;
 
     public Employee(String name, String surname, String otchestvo, int otdel, int earnMoney) {
@@ -52,7 +52,7 @@ public class Employee {
     }
 
     @Override
-    public String toString(){
-        return id+". "+surname+" "+name+" "+otchestvo+" Отдел "+otdel+" з/п "+earnMoney;
+    public String toString() {
+        return id + ". " + surname + " " + name + " " + otchestvo + " Отдел " + otdel + " з/п " + earnMoney;
     }
 }
