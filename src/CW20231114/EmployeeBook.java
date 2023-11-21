@@ -30,9 +30,13 @@ public class EmployeeBook {
                 if (!start) start = true;
             }
         }
-        System.out.println("Сотрудник с максимальной зарплатой - " +
-                (spisok != null ? spisok[idMin - 1].getSurname() + " " + spisok[idMin - 1].getName() +
-                        " " + spisok[idMin - 1].getOtchestvo() : ""));
+        System.out.print("Сотрудник с максимальной зарплатой - ");
+        for (var element : spisok) {
+            if (element == null) continue;
+            if(element.getId()==idMin){
+                System.out.println(element.getSurname() + " " + element.getName() +" " + element.getOtchestvo());
+            }
+        }
     }
 
     public void findMaxEarnMoney(Employee[] spisok) {
@@ -46,10 +50,14 @@ public class EmployeeBook {
                 if (!start) start = true;
             }
         }
-        System.out.println("Сотрудник с максимальной зарплатой - " +
-                (spisok != null ? spisok[idMax - 1].getSurname() + " " + spisok[idMax - 1].getName() +
-                        " " + spisok[idMax - 1].getOtchestvo() : ""));
-    }
+        System.out.print("Сотрудник с максимальной зарплатой - ");
+        for (var element : spisok) {
+            if (element == null) continue;
+            if(element.getId()==idMax){
+                System.out.println(element.getSurname() + " " + element.getName() +" " + element.getOtchestvo());
+            }
+        }
+            }
 
     public void calculateAverageEarnMoney(Employee[] spisok) {
         double sum = 0;
